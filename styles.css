@@ -1,0 +1,170 @@
+/* Styles généraux */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+/* En-tête */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+#site-title {
+    font-size: 28px;
+    color: #fff;
+    margin: 0;
+    margin-right: 10px; /* Ajoute un peu d'espace entre le titre et le logo */
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+/* Styles principaux */
+main {
+    padding: 40px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.services {
+    background-color: #1c1c1c;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    color: #ffc107;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+select, button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 2px solid #333;
+    background-color: #282828;
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+select:hover, button:hover {
+    background-color: #333;
+}
+
+.total {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffdd00;
+}
+
+/* Styles pour le modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Assombrissement de l'arrière-plan */
+}
+
+.modal-content {
+    background-color: #333; /* Fond sombre pour le contenu du modal */
+    margin: 10% auto; /* Centrage avec un peu plus de marge sur le haut */
+    padding: 20px;
+    border: 1px solid #444; /* Bordure légèrement plus claire pour une définition subtile */
+    width: 50%; /* Largeur adaptée pour le contenu */
+    border-radius: 10px; /* Bords arrondis pour rester dans le thème moderne */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8); /* Ombre portée pour un effet de profondeur */
+}
+
+.close {
+    color: #ccc; /* Couleur claire pour le bouton de fermeture */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #ffc107; /* Jaune au survol pour rester dans le thème */
+    text-decoration: none;
+}
+
+.modal h2, .modal p {
+    color: #fff; /* Texte blanc pour un contraste optimal sur fond sombre */
+}
+
+.modal button {
+    background-color: #ffc107; /* Boutons en jaune pour l'action */
+    color: #000; /* Texte noir pour une lisibilité accrue */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.modal button:hover {
+    background-color: #ffdd00; /* Jaune plus clair au survol */
+}
+
+/* Bulle Instagram en bas à gauche */
+.instagram-bubble {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.instagram-bubble img {
+    width: 30px;
+    height: 30px;
+}
+
+.instagram-bubble:hover {
+    background-color: #333;
+}
