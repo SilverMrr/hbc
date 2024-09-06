@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBC Coiffure</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1 id="site-title">Pheno & Co</h1>
+            <img src="https://www.hbccoiffuremontpellier.com/wp-content/uploads/2017/11/logo-hair-beauty-concept-medium.png" alt="Logo de HBC Coiffure">
+        </div>
+    </header>
+
+    <main>
+        <section class="services">
+            <h1>Bienvenue chez HBC Coiffure !</h1>
+            <p>Sélectionnez votre type de coupe pour voir les options disponibles.</p>
+
+            <!-- Étape 1 : Sélection de la coupe principale -->
+            <div class="step" id="step-1">
+                <label for="main-service-select">Choisissez votre coupe :</label>
+                <div class="select-wrapper">
+                    <select id="main-service-select" onchange="showOptions()">
+                        <option value="0">-- Sélectionnez une coupe --</option>
+                        <option value="20">Coupe standard (dégradés) - 20€</option>
+                        <option value="25">Coupe + Barbe - 25€</option>
+                        <option value="15">Coupe enfants/adolescents - 15€</option>
+                        <option value="30">Big Chop - 30€</option>
+                        <option value="20">Buzz Cut Classique - 20€</option>
+                        <option value="55">Buzz Cut Coloration - 55€</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Étape 2 : Sélection des options -->
+            <div class="step" id="step-2" style="display:none;">
+                <label for="option-select">Choisissez des options supplémentaires :</label>
+                <div class="select-wrapper">
+                    <select id="option-select" onchange="updateTotal()">
+                        <option value="0">Aucune</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Total -->
+            <div class="total" id="total-container" style="display:none;">
+                <h3>Total : <span id="total-price">0€</span></h3>
+                <button onclick="bookAppointment()">Prendre rendez-vous</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal pour les options de réservation -->
+    <div id="appointment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Montrer ceci à votre coiffeur</h2>
+            <p id="summary">Résumé des services...</p>
+            <p>Total estimé : <span id="final-price">0€</span></p>
+            <h2>Rendez-vous au salon</h2>
+            <p>Vous pouvez vous rendre directement au salon pour un service sans rendez-vous préalable.</p>
+            <h2>Prendre rendez-vous en ligne</h2>
+            <p><button onclick="window.location.href='https://www.phenoandco.com/';">Réserver en ligne</button></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

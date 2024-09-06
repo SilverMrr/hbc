@@ -1,0 +1,194 @@
+/* Styles généraux */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+/* En-tête */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+#site-title {
+    font-size: 28px;
+    color: #fff;
+    margin: 0;
+    margin-right: 10px; /* Ajoute un peu d'espace entre le titre et le logo */
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+/* Styles principaux */
+main {
+    padding: 40px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.services {
+    background-color: #1c1c1c;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    color: #ffc107;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 2px solid #333;
+    background-color: #282828;
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+.total {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffdd00;
+}
+
+/* Styles pour le modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Assombrissement de l'arrière-plan */
+}
+
+.modal-content {
+    background-color: #333; /* Fond sombre pour le contenu du modal */
+    margin: 10% auto; /* Centrage avec un peu plus de marge sur le haut */
+    padding: 20px;
+    border: 1px solid #444; /* Bordure légèrement plus claire pour une définition subtile */
+    width: 50%; /* Largeur adaptée pour le contenu */
+    border-radius: 10px; /* Bords arrondis pour rester dans le thème moderne */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8); /* Ombre portée pour un effet de profondeur */
+}
+
+.close {
+    color: #ccc; /* Couleur claire pour le bouton de fermeture */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #ffc107; /* Jaune au survol pour rester dans le thème */
+    text-decoration: none;
+}
+
+.modal h2, .modal p {
+    color: #fff; /* Texte blanc pour un contraste optimal sur fond sombre */
+}
+
+.modal button {
+    background-color: #ffc107; /* Boutons en jaune pour l'action */
+    color: #000; /* Texte noir pour une lisibilité accrue */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.modal button:hover {
+    background-color: #ffdd00; /* Jaune plus clair au survol */
+}
+
+/* Amélioration du menu déroulant */
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #ffc107; /* Bordure de couleur jaune pour un contraste agréable */
+    background-color: #282828; /* Couleur de fond sombre pour un look moderne */
+    color: #fff; /* Texte blanc pour un bon contraste */
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police moderne */
+    appearance: none; /* Supprime l'apparence par défaut du sélecteur pour le personnaliser */
+    -webkit-appearance: none; /* Support pour iOS */
+    -moz-appearance: none; /* Support pour Firefox */
+    text-align-last: center; /* Centre le texte à l'intérieur du menu déroulant */
+    transition: background-color 0.3s, border-color 0.3s; /* Transitions pour les interactions */
+}
+
+select:hover {
+    background-color: #333; /* Change la couleur de fond au survol */
+    border-color: #ffdd00; /* Change la bordure au survol */
+}
+
+select:focus {
+    outline: none; /* Supprime le contour par défaut lors de la sélection */
+    border-color: #ffdd00; /* Bordure dorée lorsque le sélecteur est actif */
+}
+
+/* Flèche personnalisée pour le menu déroulant */
+select::-ms-expand {
+    display: none; /* Masque la flèche par défaut sur IE et Edge */
+}
+
+/* Conteneur personnalisé pour la flèche */
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::after {
+    content: '\25BC'; /* Flèche vers le bas */
+    font-size: 16px;
+    color: #fff;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Empêche les interactions avec la flèche */
+}
